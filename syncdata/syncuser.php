@@ -6,14 +6,17 @@
     echo $OUTPUT->header();
 
     $usernew = new stdClass();
-    $usernew -> username = 'test5';
+
+    $usernew -> username = 'test1';
     $usernew -> mnethostid = $CFG->mnet_localhost_id; // Always local user.
     $usernew -> confirmed = 1;
     $usernew -> timecreated = time();
 
     $usernew -> password = 'abc';
     $usernew -> password = hash_internal_user_password($usernew->password);
-    $usernew -> auth = 'sync';
+    $usernew -> auth = 'manual';
+    $usernew -> email = '';
+    $usernew -> country = '';
     $usernew -> firstname = 'test1';
     $usernew -> lastname = 'nv';
     $user = $DB -> get_record('user', array('username' => $usernew->username));
