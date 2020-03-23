@@ -1,0 +1,22 @@
+<h2 class="card-title">{{{ title }}}</h2>
+<h3 class="card-subtitle mb-2 text-muted">{{{ subtitle }}}</h3>
+
+{{#hascertificates}}
+    {{#coursescertificates}}
+        <div class="card mb-1">
+            <div class="card-body">
+                <h4 class="card-title">{{{ fullname }}}</h4>
+                {{#certificates}}
+                    <p class="card-text"><a target="_blank" href="{{ downloadurl }}">{{# pix }} icon, {{{ module }}} {{/ pix }} {{{ name }}}</a></p>
+                {{/certificates}}
+            </div>
+        </div>
+    {{/coursescertificates}}
+{{/hascertificates }}
+{{^hascertificates}}
+    <div class="card mt-1">
+        <div class="card-body">
+            <p class="card-text">{{#str}}nohavecertificates, theme_moove{{/str}}</p>
+        </div>
+    </div>
+{{/hascertificates}}

@@ -1,0 +1,30 @@
+{{#sponsorsfrontpage}}
+    <div class="container frontpage-sponsors">
+        <h2>{{{sponsorstitle}}}</h2>
+        <p>{{{sponsorssubtitle}}}</p>
+        <div class="row">
+            {{#sponsors}}
+            <div class="item">
+                <a href="{{{url}}}">
+                    <img src="{{{image}}}" title="{{{url}}}"/>
+                </a>
+            </div>
+            {{/sponsors}}
+        </div>
+    </div>
+{{/sponsorsfrontpage}}
+{{#clientsfrontpage}}
+    <div class="container frontpage-clients">
+        <h2>{{{clientstitle}}}</h2>
+        <p>{{{clientssubtitle}}}</p>
+        <div class="row">
+            {{#clients}}
+                <div class="item">
+                    <a href="{{{url}}}">
+                        <img src="{{{image}}}" title="{{{url}}}"/>
+                    </a>
+                </div>
+            {{/clients}}
+        </div>
+    </div>
+{{/clientsfrontpage}}
